@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+    transition: all 0.2s ease-in-out;
+}
+/* -----Utility Classes----------------------------------------------- */
+.center{
+    text-align: center;
+    color: white;
+}
+.btn{
+    display: inline-block;
+    background: black;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 12px;
+    border-radius: 30px;
+    transition: background 0.5s;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+    border-radius: 30px;
+}
+/* ---------------------Navbar/Logo----------------------------------- */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin:10px 30px;
+}
+.navbar ul li a{
+    text-decoration: none;   
+    color: white;
+    font-size: 20px;
+    padding: 2px 2px;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: underline;
+}
+#logo img{
+    margin: 0px 11px;
+    width: 60px;
+    height: 69px;
+}
+#logo img:hover{
+    transform: scale(1.2);
+}
+#cart img{
+    margin: 3px 15px;
+    width: 56px;
+    height: 56px;
+    background-color: white;
+}
+#cart img:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+.container{
+    background-color: rgb(28 27 27);
+    margin-top: -26px;
+}
+/* ---------------------INTRO----------------------------------- */
+.subtitle{
+    padding: 37px 9px;
+    font-size: 2.2vw;
+    font-weight: 500;
+    color: white;
+}
+.intro p{
+    color: white;
+}
+.intro span{
+    color: rgb(255, 0, 0);
+}
+.intro{
+    margin: 21px 0 20px;
+}
+.introimg{
+    width: 300px;
+    margin-left: 70%;
+    margin-top: -23%;
+    margin-bottom: 4%;
+}
+.introimg:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+#introtext{
+    display: inline-block;
+    padding: 102px 8px;
+}
+
+/* --------------------------COLLECTIONS-------------------------------------------- */
+.container2 h2{
+   padding: 16px;
+   position: relative;
+}
+.heading::after{
+    content: "";
+    background: red;
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.collections{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap:30px;
+    margin-top: 30px;
+}
+.collections div img{
+    width: 100%;
+    height: 60%;
+    border-radius: 20px;
+}
+.collections div img:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+.collections div p{
+    text-align: center;
+    color: white;
+}
+/* ----------------------------Product Card------------------------------------- */
+.container3{
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+   
+}
+.product{
+    width: 400px;
+    height: 550px;
+    perspective: 1000px;
+}
+.productinner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style:preserve-3d;
+    transition: 1s;
+   
+}
+.product-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: translateZ(25px);
+}
+.product-top{
+    height: 50%;
+    width: 100%;
+    background: rgb(28 27 27);
+    color: white;
+}
+.product-top h1{
+    font-size: 40px;
+    margin-left: 20px;
+    font-style: italic;
+    opacity: 0.3;
+}
+.product-bottom{
+    padding: 50px 30px;
+    background: rgb(28 27 27);
+}
+.product-bottom p{
+    color: white;
+    font-size: 12px;
+}
+.product-bottom h1{
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 5px;
+}
+.product-bottom h1 span{
+    color: green;
+}
+.product-bottom button{
+    padding: 9px 25px;
+    border: none;
+}
+.next{
+    display: flex;
+    float: right;
+    margin-top: -10px;
+}
+.next-item{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    padding: 5px;
+    box-shadow: -5px 0 8px 2px rgba(156, 216,244, 0.5);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+.next-item img{
+    width: 80%;
+    height: 80%;
+    padding-top: 10%;
+}
+.next-item:hover{
+    background: rgba(156, 216,244, 0.5);
+    box-shadow: none;
+    transition: 0.5;
+}
+.product-top2{
+    background: rgb(28 27 27);
+}
+.product-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    transform:  translateZ(-25px) rotateY(180deg);
+}
+.left-side,.right-side{
+    width: 50px;
+    height: 100%;
+    background: white;
+    transform: rotateY(90deg);
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+.right-side{
+    transform: rotateY(-90deg);
+    left: auto;
+    right: -25px;
+}
+#front{
+    width: 130px;
+    top: 70px;
+    left: 36%;
+    position: absolute;
+    transform: translateZ(50px);
+    transition: 1s;
+    z-index: 100;
+}
+#back{
+    width: 150px;
+    top: 66px;
+    left: -257px;
+    position: absolute;
+    transform: translateZ(50px) ;
+    transition: 1s;
+    z-index: 100;
+
+}
+/* -------------------------------------FOOTER---------------------------------  */
+.container4{
+    background-color: black;
+}
+footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap:500px;
+    margin-top: 12px;
+}
+.container4 h2{
+    text-align: center;
+    color: white;
+    
+}
+.app{
+    max-width: 250px;
+    display: inline-block;
+}
+.app img{
+    width: 50%;
+    display: block;
+    margin: 14px 60px;
+}
+.app img:hover{
+    transform: translateY(-5px);
+}
+.about{
+    display: inline-block;
+    max-width: 250px;
+}
+.about img{
+    width: 30%;
+    display: block;
+    margin-left: 35%;
+    margin-top: 7%;
+}
+.about p{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+.social ul i{
+    color: white
+}
+ul{
+    list-style: none;
+}
+.social ul a i{
+    width: 20px;
+    font-size: 40px;
+    display: block;
+    margin: auto;
+    color: white;
+    transition: color;
+}
+.follow:hover{
+    transform: translateY(-2px);
+}
+.social .bxl-facebook-square:hover{
+    color: rgb(59,89,152);
+}
+.social .bxl-instagram-alt:hover{
+    color: rgb(251, 173, 80);
+}
+.social .bxl-linkedin:hover{
+    color:  #0e76a8;
+}
+.social .bxl-twitter:hover{
+    color:   #00acee;
+}
+.Copyright{
+    text-align: center;
+    color: white;
+}
+
+/* -------------------------Media Query----------------------------- */
+@media only screen and (max-width :1000px){
+    *{
+        flex-wrap: wrap;
+    }
+    .container3{
+        width: 300px;
+    }
+    .introimg{
+        display: none;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        grid-gap: 30px;
+        margin-top: 12px;
+    }
+    .app img {
+        width: 100%;
+        display: block;
+    }
+    .about img{
+        display: none;
+    }
+    .product-top h1 {
+        font-size: 25px;
+        margin-left: 52px;
+        font-style: italic;
+        opacity: 0.3;
+    }
+    .productinner{
+        margin-top: -45%;
+    }
+    #front, #back{
+        top: -10%;
+    }
+    footer{
+        margin-top: -25%;
+    }
+    .about p{
+        margin-top: -300px;
+        text-align: center;
+        margin-left: 105px;
+        font-size: 20px;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .navbar ul li a{
+        font-size: 1rem;
+        padding: -1px;
+        padding-bottom: 8px;
+        color: #fff;
+        margin: -15px;
+    }
+    .social ul a i{
+        font-size: 28px;
+    }
+    #logo img{
+        margin: 3px 15px;
+        width: 90px;
+        height: 65px;
+    }
+    #cart img{
+        display: none;
+    }
+    .subtitle {
+        font-size: 8.2vw;
+    }    
+}
